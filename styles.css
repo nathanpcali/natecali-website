@@ -338,7 +338,17 @@ body {
 /* About Section */
 .about-section {
     margin-bottom: 120px;
-    max-width: 800px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text-wrapper {
+    max-width: 600px;
 }
 
 .about-text {
@@ -350,6 +360,18 @@ body {
 
 .about-text strong {
     font-weight: 500;
+}
+
+.about-image-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
 /* Contact Section */
@@ -456,8 +478,17 @@ body {
         margin-top: 80px;
     }
 
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
     .about-text {
         font-size: 15px;
+    }
+
+    .about-image-wrapper {
+        order: -1; /* Image appears first on mobile */
     }
 }
 
