@@ -1,60 +1,55 @@
-<svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Highly Detailed Shelby Cobra - Max accuracy to reference image -->
+<svg width="60" height="60" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Iconic Shelby Cobra Reconstruction -->
   
-  <!-- Outer Body Coil (Bottom) -->
-  <path d="M20 82C25 82 35 78 45 72C55 65 65 65 75 70C85 75 90 82 85 88C80 94 70 96 60 96C50 96 40 92 30 88C20 84 15 84 15 80C15 76 18 74 20 82Z" fill="black"/>
-  <path d="M25 85C35 90 45 92 55 92C65 92 75 90 85 85C95 80 95 75 85 70C75 65 65 65 55 70C45 75 35 80 25 85Z" fill="black"/>
+  <!-- Outer Body Frame (Black) -->
+  <path d="M120 20C120 10 130 5 140 5C150 5 160 10 160 20C160 30 150 35 140 40C130 45 120 40 120 20Z" fill="black"/>
+  <!-- Open Mouth/Jaw -->
+  <path d="M140 40L165 55L140 65V40Z" fill="black"/>
   
-  <!-- Rising Body/Neck -->
-  <path d="M55 70C55 55 58 40 62 30C66 20 70 10 75 5" stroke="black" stroke-width="9" stroke-linecap="round" fill="none"/>
+  <!-- "S" Curve Body and Hood (Continuous) -->
+  <path d="M140 20 
+           C 140 5, 100 0, 80 20 
+           C 60 40, 60 70, 70 90 
+           C 80 110, 110 120, 120 140 
+           C 130 160, 110 180, 80 180 
+           C 50 180, 30 170, 20 150" 
+        stroke="black" stroke-width="16" stroke-linecap="round" fill="none"/>
   
-  <!-- Massive Flared Hood -->
-  <path d="M45 22C40 12 45 2 55 1C65 -1 75 2 80 8C85 14 85 24 80 34C75 44 65 52 55 55" stroke="black" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- Flared Hood Part -->
+  <path d="M80 20 
+           C 60 10, 40 20, 35 40 
+           C 30 60, 40 90, 60 110" 
+        stroke="black" stroke-width="6" stroke-linecap="round" fill="none"/>
+
+  <!-- White head details -->
+  <path d="M145 45L160 55L145 60V45Z" fill="white"/>
+  <circle cx="132" cy="18" r="3" fill="white"/>
   
-  <!-- Head and Jaws (Turned, Open Mouth) -->
-  <path d="M75 5C75 2 80 0 85 0C90 0 95 3 95 8C95 13 90 16 85 18C80 20 75 18 75 5Z" fill="black"/>
-  <!-- Lower Jaw -->
-  <path d="M85 18L95 24L85 28Z" fill="black"/>
-  
-  <!-- White details inside the head/mouth -->
-  <path d="M88 12L94 21L88 23Z" fill="white"/>
-  <!-- Eye line -->
-  <path d="M82 6L88 4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-  
-  <!-- Inner Segmented Body (Belly Scales) -->
-  <g stroke="white" stroke-width="2.5">
-    <path d="M58 35H73"/>
-    <path d="M56 43H71"/>
-    <path d="M54 51H69"/>
-    <path d="M52 59H67"/>
-    <path d="M50 67H65"/>
-    <path d="M48 75H63"/>
-    <path d="M46 83H61"/>
+  <!-- Segmented Throat/Belly (Horizontal Banding) -->
+  <g stroke="white" stroke-width="4" stroke-linecap="round">
+    <path d="M115 50H135"/>
+    <path d="M110 70H130"/>
+    <path d="M100 90H120"/>
+    <path d="M90 110H110"/>
+    <path d="M75 130H95"/>
   </g>
   
-  <!-- Dense Diamond Scale Pattern (Outer Body) -->
-  <g fill="white" opacity="0.9">
-    <!-- Hood Top Patterns -->
-    <rect x="52" y="5" width="3.5" height="3.5" transform="rotate(45 52 5)"/>
-    <rect x="58" y="5" width="3.5" height="3.5" transform="rotate(45 58 5)"/>
-    <rect x="64" y="5" width="3.5" height="3.5" transform="rotate(45 64 5)"/>
-    <rect x="70" y="5" width="3.5" height="3.5" transform="rotate(45 70 5)"/>
+  <!-- Diamond Scale Pattern (Following the outer curve) -->
+  <g fill="white">
+    <!-- Hood Section -->
+    <rect x="85" y="10" width="8" height="8" transform="rotate(45 85 10)"/>
+    <rect x="100" y="10" width="8" height="8" transform="rotate(45 100 10)"/>
+    <rect x="115" y="10" width="8" height="8" transform="rotate(45 115 10)"/>
     
-    <!-- Body Side Patterns (Staggered Diamonds) -->
-    <rect x="42" y="25" width="4.5" height="4.5" transform="rotate(45 42 25)"/>
-    <rect x="48" y="32" width="4.5" height="4.5" transform="rotate(45 48 32)"/>
-    <rect x="42" y="39" width="4.5" height="4.5" transform="rotate(45 42 39)"/>
-    <rect x="36" y="46" width="4.5" height="4.5" transform="rotate(45 36 46)"/>
-    <rect x="42" y="53" width="4.5" height="4.5" transform="rotate(45 42 53)"/>
-    <rect x="36" y="60" width="4.5" height="4.5" transform="rotate(45 36 60)"/>
-    <rect x="30" y="67" width="4.5" height="4.5" transform="rotate(45 30 67)"/>
-    <rect x="36" y="74" width="4.5" height="4.5" transform="rotate(45 36 74)"/>
-    <rect x="30" y="81" width="4.5" height="4.5" transform="rotate(45 30 81)"/>
+    <!-- Body curve (Left side of the S) -->
+    <rect x="65" y="35" width="10" height="10" transform="rotate(45 65 35)"/>
+    <rect x="55" y="60" width="10" height="10" transform="rotate(45 55 60)"/>
+    <rect x="60" y="85" width="10" height="10" transform="rotate(45 60 85)"/>
+    <rect x="75" y="110" width="10" height="10" transform="rotate(45 75 110)"/>
+    <rect x="100" y="135" width="10" height="10" transform="rotate(45 100 135)"/>
     
-    <!-- Tail Section Patterns -->
-    <rect x="75" y="75" width="4" height="4" transform="rotate(45 75 75)"/>
-    <rect x="82" y="75" width="4" height="4" transform="rotate(45 82 75)"/>
-    <rect x="78" y="83" width="4" height="4" transform="rotate(45 78 83)"/>
-    <rect x="85" y="83" width="4" height="4" transform="rotate(45 85 83)"/>
+    <!-- Tail Section -->
+    <rect x="120" y="160" width="8" height="8" transform="rotate(45 120 160)"/>
+    <rect x="100" y="165" width="8" height="8" transform="rotate(45 100 165)"/>
   </g>
 </svg>
