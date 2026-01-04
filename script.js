@@ -87,28 +87,47 @@ projectItems.forEach((project, index) => {
     });
 });
 
-// Optional: Add subtle fade-in on scroll
+// Scroll animations for project items - fade in/out and scale
 const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: [0, 0.1, 0.3, 0.5, 0.7, 0.9, 1],
+    rootMargin: '-10% 0px -10% 0px'
 };
 
-const observer = new IntersectionObserver((entries) => {
+const projectObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
+        const project = entry.target;
+        const intersectionRatio = entry.intersectionRatio;
+        
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
+            // Fade in and scale up when entering viewport
+            project.classList.add('visible');
+            
+            // Scale to 115% when in center of viewport (intersectionRatio > 0.5)
+            if (intersectionRatio > 0.5) {
+                project.classList.add('in-view');
+            } else {
+                project.classList.remove('in-view');
+            }
+        } else {
+            // Fade out when leaving viewport
+            project.classList.remove('visible', 'in-view');
         }
     });
 }, observerOptions);
 
-// Observe project items for subtle fade-in
+// Observe all project items for scroll animations
 projectItems.forEach((project, index) => {
-    project.style.opacity = '0.8';
-    project.style.transition = 'opacity 0.4s ease';
-    observer.observe(project);
+    // Initial state - invisible and scaled down
+    project.style.opacity = '0';
+    project.style.transform = 'scale(0.85)';
     
-    // Stagger the fade-in
+    // Observe each project item
+    projectObserver.observe(project);
+    
+    // Stagger initial appearance slightly
     setTimeout(() => {
-        project.style.opacity = '1';
-    }, index * 50);
+        if (project.getBoundingClientRect().top < window.innerHeight) {
+            project.classList.add('visible');
+        }
+    }, index * 100);
 });
