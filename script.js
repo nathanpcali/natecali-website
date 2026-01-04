@@ -87,7 +87,7 @@ projectItems.forEach((project, index) => {
     });
 });
 
-// Scroll animations for project items - fade in/out and scale
+// Scroll animations for project items - scale only (no opacity)
 const observerOptions = {
     threshold: [0, 0.1, 0.3, 0.5, 0.7, 0.9, 1],
     rootMargin: '-10% 0px -10% 0px'
@@ -99,9 +99,6 @@ const projectObserver = new IntersectionObserver((entries) => {
         const intersectionRatio = entry.intersectionRatio;
         
         if (entry.isIntersecting) {
-            // Fade in and scale up when entering viewport
-            project.classList.add('visible');
-            
             // Scale to 115% when in center of viewport (intersectionRatio > 0.5)
             if (intersectionRatio > 0.5) {
                 project.classList.add('in-view');
@@ -109,25 +106,14 @@ const projectObserver = new IntersectionObserver((entries) => {
                 project.classList.remove('in-view');
             }
         } else {
-            // Fade out when leaving viewport
-            project.classList.remove('visible', 'in-view');
+            // Remove scale when leaving viewport
+            project.classList.remove('in-view');
         }
     });
 }, observerOptions);
 
 // Observe all project items for scroll animations
-projectItems.forEach((project, index) => {
-    // Initial state - invisible and scaled down
-    project.style.opacity = '0';
-    project.style.transform = 'scale(0.85)';
-    
+projectItems.forEach((project) => {
     // Observe each project item
     projectObserver.observe(project);
-    
-    // Stagger initial appearance slightly
-    setTimeout(() => {
-        if (project.getBoundingClientRect().top < window.innerHeight) {
-            project.classList.add('visible');
-        }
-    }, index * 100);
 });
