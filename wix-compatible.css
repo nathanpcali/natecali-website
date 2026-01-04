@@ -1,0 +1,91 @@
+/* Wix-Compatible CSS
+ * This version is optimized to work within Wix's framework
+ * Use this in Wix's Custom Code section (Dev Mode required)
+ */
+
+/* Base Styles - These will override Wix defaults */
+#SITE_CONTAINER {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Hero Section Styling */
+[data-testid="richTextElement"] h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    margin-bottom: 1rem;
+}
+
+/* Portfolio Grid - Use with Wix Repeater or Gallery */
+[data-testid="galleryContainer"] {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Portfolio Item Hover Effect */
+[data-testid="galleryItem"] {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+[data-testid="galleryItem"]:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact Form Styling */
+[data-testid="formContainer"] {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+[data-testid="inputContainer"] input,
+[data-testid="inputContainer"] textarea {
+    border-radius: 4px;
+    padding: 0.75rem;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Navigation Menu Styling */
+[data-testid="menuContainer"] a {
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+[data-testid="menuContainer"] a:hover {
+    opacity: 0.7;
+}
+
+/* Section Spacing */
+[data-testid="sectionContainer"] {
+    padding: 6rem 0;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    [data-testid="richTextElement"] h1 {
+        font-size: 3rem;
+    }
+    
+    [data-testid="galleryContainer"] {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Custom Button Styling */
+[data-testid="buttonElement"] {
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+[data-testid="buttonElement"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Note: Wix uses data-testid attributes for elements
+ * You may need to inspect your Wix site to find the exact selectors
+ * Use Wix's Design panel for most styling, and this CSS for advanced customization
+ */
+
