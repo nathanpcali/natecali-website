@@ -279,7 +279,7 @@ body {
 }
 
 .project-video {
-    width: 100%;
+    width: 85%;
     margin-bottom: 20px;
     position: relative;
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
