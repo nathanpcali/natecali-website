@@ -1,3 +1,20 @@
+// Navbar scroll effect - scale logo on scroll
+const navbar = document.querySelector('.navbar');
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    // Add 'scrolled' class when scrolled past hero section
+    if (currentScroll > 100) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+    
+    lastScroll = currentScroll;
+});
+
 // Mobile Navigation Toggle
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');

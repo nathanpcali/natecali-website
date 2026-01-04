@@ -46,6 +46,7 @@ body {
     gap: 14px;
     text-decoration: none;
     color: #000;
+    transition: transform 0.3s ease, gap 0.3s ease;
 }
 
 .logo-icon {
@@ -53,7 +54,7 @@ body {
     height: auto;
     max-height: 60px;
     display: block;
-    transition: opacity 0.2s ease;
+    transition: width 0.3s ease, max-height 0.3s ease, opacity 0.2s ease;
     object-fit: contain;
 }
 
@@ -66,11 +67,25 @@ body {
     font-weight: 500;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    transition: opacity 0.2s ease;
+    transition: font-size 0.3s ease, opacity 0.2s ease;
 }
 
 .logo-link:hover .logo-text {
     opacity: 0.7;
+}
+
+/* Scrolled state - smaller logo */
+.navbar.scrolled .logo-icon {
+    width: 40px;
+    max-height: 40px;
+}
+
+.navbar.scrolled .logo-text {
+    font-size: 14px;
+}
+
+.navbar.scrolled .logo-link {
+    gap: 10px;
 }
 
 .nav-menu {
@@ -349,6 +364,15 @@ body {
         width: 40px;
         height: auto;
         max-height: 40px;
+    }
+
+    .navbar.scrolled .logo-icon {
+        width: 32px;
+        max-height: 32px;
+    }
+
+    .navbar.scrolled .logo-text {
+        font-size: 12px;
     }
 
     .nav-menu {
