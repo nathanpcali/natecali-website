@@ -1,25 +1,47 @@
-// Simple smooth scroll for any anchor links (if you add them later)
+// Mobile Navigation Toggle
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+const navLinks = document.querySelectorAll('.nav-link');
+
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+}
+
+// Close mobile menu when clicking on a link
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+    });
+});
+
+// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            const navHeight = document.querySelector('.navbar').offsetHeight;
+            const targetPosition = target.offsetTop - navHeight;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
             });
         }
     });
 });
 
-// Optional: Add click handlers for projects to open videos/modals
-const projects = document.querySelectorAll('.project');
+// Project item click handlers (for future video modal/page implementation)
+const projectItems = document.querySelectorAll('.project-item');
 
-projects.forEach((project, index) => {
+projectItems.forEach((project, index) => {
     project.addEventListener('click', () => {
         // You can add functionality here to:
         // - Open a video modal
-        // - Navigate to a project page
+        // - Navigate to a project detail page
         // - Play a video inline
         console.log('Project clicked:', index);
         
@@ -45,14 +67,14 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe projects for subtle fade-in
-projects.forEach(project => {
-    project.style.opacity = '0.7';
+// Observe project items for subtle fade-in
+projectItems.forEach((project, index) => {
+    project.style.opacity = '0.8';
     project.style.transition = 'opacity 0.4s ease';
     observer.observe(project);
     
-    // Set to full opacity after a moment
+    // Stagger the fade-in
     setTimeout(() => {
         project.style.opacity = '1';
-    }, 100);
+    }, index * 50);
 });
