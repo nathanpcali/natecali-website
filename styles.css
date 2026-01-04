@@ -40,12 +40,34 @@ body {
     align-items: center;
 }
 
-.logo a {
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    display: block;
+    transition: opacity 0.2s ease;
+}
+
+.logo-link:hover .logo-icon {
+    opacity: 0.7;
+}
+
+.logo-text {
     font-size: 18px;
     font-weight: 500;
-    color: #000;
-    text-decoration: none;
     letter-spacing: 0.5px;
+    transition: opacity 0.2s ease;
+}
+
+.logo-link:hover .logo-text {
+    opacity: 0.7;
 }
 
 .nav-menu {
@@ -197,6 +219,15 @@ body {
 @media (max-width: 768px) {
     .nav-container {
         padding: 20px 24px;
+    }
+
+    .logo-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .logo-text {
+        font-size: 16px;
     }
 
     .nav-menu {
