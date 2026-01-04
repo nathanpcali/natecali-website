@@ -34,6 +34,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Scroll indicator click handler
+const scrollIndicator = document.querySelector('.scroll-indicator');
+if (scrollIndicator) {
+    scrollIndicator.addEventListener('click', () => {
+        const workSection = document.querySelector('#work');
+        if (workSection) {
+            const navHeight = document.querySelector('.navbar').offsetHeight;
+            const targetPosition = workSection.offsetTop - navHeight;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+    scrollIndicator.style.cursor = 'pointer';
+}
+
 // Project item click handlers (for future video modal/page implementation)
 const projectItems = document.querySelectorAll('.project-item');
 
