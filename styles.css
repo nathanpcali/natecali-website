@@ -443,28 +443,39 @@ body {
     }
 
     .container {
-        padding: 100px 24px 60px;
+        padding: 100px 20px 60px;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .section-heading {
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 40px;
     }
 
     .project-item {
         padding: 24px 0;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .project-video {
         margin-bottom: 16px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .project-title {
-        font-size: 22px;
+        font-size: 20px;
+        line-height: 1.3;
+        word-wrap: break-word;
     }
 
     .project-meta {
-        font-size: 13px;
+        font-size: 12px;
+        line-height: 1.6;
+        word-wrap: break-word;
     }
 
     .about-section,
@@ -495,23 +506,57 @@ body {
     .hero-title {
         font-size: 24px;
     }
+    
     .container {
-        padding: 90px 20px 40px;
+        padding: 90px 16px 40px;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .nav-container {
-        padding: 20px 20px;
+        padding: 20px 16px;
+    }
+
+    .section-heading {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+
+    .project-item {
+        padding: 20px 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .project-video {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 16px;
     }
 
     .project-title {
-        font-size: 20px;
+        font-size: 18px;
+        line-height: 1.3;
+        word-wrap: break-word;
     }
 
     .project-meta {
-        font-size: 12px;
+        font-size: 11px;
         flex-direction: column;
         align-items: flex-start;
         gap: 4px;
+        line-height: 1.6;
+        word-wrap: break-word;
+    }
+
+    .about-content {
+        gap: 30px;
+    }
+
+    .about-text {
+        font-size: 14px;
+        line-height: 1.7;
     }
 
     .section-heading {
