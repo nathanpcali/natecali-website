@@ -150,19 +150,22 @@ projectItems.forEach((project) => {
 
 // Play button functionality - play video with sound when clicked
 const playButtons = document.querySelectorAll('.play-button');
-const vimeoPlayers = document.querySelectorAll('.vimeo-player');
 
-playButtons.forEach((button, index) => {
+playButtons.forEach((button) => {
     button.addEventListener('click', (e) => {
         e.stopPropagation();
-        const iframe = button.parentElement.querySelector('.vimeo-player');
+        e.preventDefault();
+        
+        const videoContainer = button.parentElement;
+        const iframe = videoContainer.querySelector('.vimeo-player');
         const videoId = iframe.getAttribute('data-video-id') || iframe.src.match(/\/video\/(\d+)/)?.[1];
         
         if (videoId) {
             // Update iframe to play with sound (unmuted, with controls)
             iframe.src = `https://player.vimeo.com/video/${videoId}?autoplay=1&muted=0&controls=1&loop=0&badge=0&autopause=0&player_id=0&app_id=58479`;
             
-            // Hide play button after clicking
+            // Hide play button immediately after clicking
+            button.style.display = 'none';
             button.classList.add('hidden');
         }
     });
