@@ -118,35 +118,6 @@ projectItems.forEach((project) => {
     projectObserver.observe(project);
 });
 
-// Auto-play videos when they come into viewport (muted, looping)
-const videoObserverOptions = {
-    threshold: 0.3,
-    rootMargin: '0px'
-};
-
-const videoObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        const iframe = entry.target.querySelector('.vimeo-player');
-        if (iframe) {
-            const videoId = iframe.src.match(/\/video\/(\d+)/)?.[1];
-            if (videoId) {
-                if (entry.isIntersecting) {
-                    // Video is in view - ensure it's playing
-                    // Vimeo will handle autoplay based on URL parameters
-                    iframe.src = iframe.src.replace(/autoplay=[01]/, 'autoplay=1');
-                } else {
-                    // Video is out of view - pause it
-                    iframe.src = iframe.src.replace(/autoplay=[01]/, 'autoplay=0');
-                }
-            }
-        }
-    });
-}, videoObserverOptions);
-
-// Observe all project items for video autoplay
-projectItems.forEach((project) => {
-    videoObserver.observe(project);
-});
 
 // Play button functionality - play video with sound when clicked
 const playButtons = document.querySelectorAll('.play-button');
