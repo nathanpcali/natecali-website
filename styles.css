@@ -242,14 +242,23 @@ body {
 }
 
 .intro-message {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro-line-1,
+.intro-line-2 {
     font-size: 20px;
     line-height: 1.8;
     color: #000;
     font-weight: 400;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
     font-style: italic;
+    margin: 0;
+}
+
+.intro-line-1 {
+    margin-bottom: 20px;
 }
 
 /* Container */
@@ -477,7 +486,8 @@ body {
         padding: 60px 0;
     }
 
-    .intro-message {
+    .intro-line-1,
+    .intro-line-2 {
         font-size: 18px;
         padding: 0 20px;
     }
@@ -551,7 +561,8 @@ body {
         padding: 40px 0;
     }
 
-    .intro-message {
+    .intro-line-1,
+    .intro-line-2 {
         font-size: 16px;
         padding: 0 16px;
         line-height: 1.7;
