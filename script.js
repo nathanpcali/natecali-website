@@ -147,3 +147,43 @@ const videoObserver = new IntersectionObserver((entries) => {
 projectItems.forEach((project) => {
     videoObserver.observe(project);
 });
+
+// Play button functionality - play video with sound when clicked
+const playButtons = document.querySelectorAll('.play-button');
+const vimeoPlayers = document.querySelectorAll('.vimeo-player');
+
+playButtons.forEach((button, index) => {
+    button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const iframe = button.parentElement.querySelector('.vimeo-player');
+        const videoId = iframe.getAttribute('data-video-id') || iframe.src.match(/\/video\/(\d+)/)?.[1];
+        
+        if (videoId) {
+            // Update iframe to play with sound (unmuted, with controls)
+            iframe.src = `https://player.vimeo.com/video/${videoId}?autoplay=1&muted=0&controls=1&loop=0&badge=0&autopause=0&player_id=0&app_id=58479`;
+            
+            // Hide play button after clicking
+            button.classList.add('hidden');
+        }
+    });
+});
+
+// Show play button on hover for videos that are muted
+projectItems.forEach((project) => {
+    const playButton = project.querySelector('.play-button');
+    const iframe = project.querySelector('.vimeo-player');
+    
+    if (playButton && iframe) {
+        project.addEventListener('mouseenter', () => {
+            if (iframe.src.includes('muted=1')) {
+                playButton.style.opacity = '0.9';
+            }
+        });
+        
+        project.addEventListener('mouseleave', () => {
+            if (iframe.src.includes('muted=1')) {
+                playButton.style.opacity = '0.7';
+            }
+        });
+    }
+});
