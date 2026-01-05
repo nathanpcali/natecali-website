@@ -274,6 +274,19 @@ body {
     transform: scale(1.15);
 }
 
+/* Reduce scale on mobile to prevent cutoff */
+@media (max-width: 768px) {
+    .project-item.in-view {
+        transform: scale(1.05);
+    }
+}
+
+@media (max-width: 480px) {
+    .project-item.in-view {
+        transform: scale(1.02);
+    }
+}
+
 .project-item:last-child {
     border-bottom: none;
 }
