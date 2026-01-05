@@ -234,6 +234,24 @@ body {
     }
 }
 
+/* Intro Message Section */
+.intro-message-section {
+    padding: 80px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.intro-message {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #000;
+    font-weight: 400;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    font-style: italic;
+}
+
 /* Container */
 .container {
     max-width: 1200px;
@@ -455,6 +473,15 @@ body {
         display: flex;
     }
 
+    .intro-message-section {
+        padding: 60px 0;
+    }
+
+    .intro-message {
+        font-size: 18px;
+        padding: 0 20px;
+    }
+
     .container {
         padding: 100px 20px 60px;
         max-width: 100%;
@@ -520,6 +547,16 @@ body {
         font-size: 24px;
     }
     
+    .intro-message-section {
+        padding: 40px 0;
+    }
+
+    .intro-message {
+        font-size: 16px;
+        padding: 0 16px;
+        line-height: 1.7;
+    }
+
     .container {
         padding: 90px 16px 40px;
         max-width: 100%;
