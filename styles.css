@@ -652,3 +652,45 @@ body {
         margin-bottom: 32px;
     }
 }
+
+/* Dark background update */
+body,
+.navbar,
+.intro-message-section {
+    background-color: #000;
+}
+
+.nav-menu {
+    background-color: #000;
+}
+
+body,
+.logo-link,
+.nav-link,
+.intro-line-1,
+.intro-line-2,
+.section-heading,
+.project-title,
+.meta-label,
+.about-text,
+.email {
+    color: #fff;
+}
+
+.project-meta,
+.meta-value,
+.meta-separator {
+    color: #b3b3b3;
+}
+
+.project-item,
+.intro-message-section,
+.contact-section,
+.navbar,
+.nav-menu {
+    border-color: #2a2a2a;
+}
+
+.hamburger span {
+    background-color: #fff;
+}
