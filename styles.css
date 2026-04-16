@@ -80,66 +80,18 @@ body {
     object-fit: contain;
 }
 
-.logo-link:hover .logo-icon {
+.logo-link:hover .logo-icon,
+.logo-link:hover .logo-wordmark-img {
     opacity: 0.8;
 }
 
-/* Stacked / sliced wordmark (GT Ultra–style echo), monochrome */
-.logo-wordmark {
-    position: relative;
-    display: inline-block;
-    line-height: 0.78;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    font-family: 'GT Ultra', inherit;
-    color: #fff;
-    transition: font-size 0.3s ease, opacity 0.2s ease;
-}
-
-.logo-wordmark__layer {
+.logo-wordmark-img {
     display: block;
-    white-space: nowrap;
-    color: #fff;
-}
-
-.logo-wordmark__layer--base {
-    position: relative;
-    z-index: 1;
-}
-
-.logo-wordmark__layer--60,
-.logo-wordmark__layer--30,
-.logo-wordmark__layer--12 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    pointer-events: none;
-}
-
-/* Upper bands only (full form reads through from base layer) */
-.logo-wordmark__layer--60 {
-    z-index: 2;
-    clip-path: inset(0 0 40% 0);
-    transform: translateX(-0.12em);
-}
-
-.logo-wordmark__layer--30 {
-    z-index: 3;
-    clip-path: inset(0 0 70% 0);
-    transform: translateX(-0.24em);
-}
-
-.logo-wordmark__layer--12 {
-    z-index: 4;
-    clip-path: inset(0 0 88% 0);
-    transform: translateX(-0.36em);
-}
-
-.logo-link:hover .logo-wordmark {
-    opacity: 0.7;
+    height: auto;
+    max-height: 52px;
+    width: auto;
+    object-fit: contain;
+    transition: max-height 0.3s ease, opacity 0.2s ease;
 }
 
 /* Scrolled state - smaller logo */
@@ -148,8 +100,8 @@ body {
     max-height: 48px;
 }
 
-.navbar.scrolled .logo-wordmark {
-    font-size: 14px;
+.navbar.scrolled .logo-wordmark-img {
+    max-height: 40px;
 }
 
 .navbar.scrolled .logo-link {
@@ -551,8 +503,8 @@ body {
         max-height: 38px;
     }
 
-    .navbar.scrolled .logo-wordmark {
-        font-size: 12px;
+    .navbar.scrolled .logo-wordmark-img {
+        max-height: 32px;
     }
 
     .nav-menu {
