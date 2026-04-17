@@ -25,33 +25,12 @@ html {
     --body-copy-size-mobile: 14px;
 }
 
-/* GT Ultra (Grilli Type): self-host licensed WOFF2 files in fonts/ (see .gitignore). */
-@font-face {
-    font-family: 'GT Ultra';
-    src: url('fonts/GTUltraStandard-Regular.woff2') format('woff2'),
-         url('fonts/GTUltra-Regular.woff2') format('woff2'),
-         url('fonts/GT-Ultra-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'GT Ultra';
-    src: url('fonts/GTUltraStandard-Medium.woff2') format('woff2'),
-         url('fonts/GTUltra-Medium.woff2') format('woff2'),
-         url('fonts/GT-Ultra-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
 body {
-    font-family: "nickel", Georgia, "Times New Roman", serif;
+    font-family: "nickel", "maku", sans-serif;
     line-height: 1.5;
     color: #fff;
     background-color: #000;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0.01em;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
