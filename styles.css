@@ -10,11 +10,11 @@ html {
 }
 
 :root {
-    --logo-size-desktop: 38px;
-    --logo-size-scrolled: 26px;
-    --logo-size-tablet: 27px;
-    --logo-size-tablet-scrolled: 19px;
-    --logo-size-mobile: 21px;
+    --logo-size-desktop: 46px;
+    --logo-size-scrolled: 31px;
+    --logo-size-tablet: 34px;
+    --logo-size-tablet-scrolled: 24px;
+    --logo-size-mobile: 26px;
 
     --project-title-size-desktop: 30px;
     --project-title-size-tablet: 23px;
