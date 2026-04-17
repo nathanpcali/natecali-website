@@ -82,17 +82,18 @@ body {
 }
 
 .logo-link:hover .logo-icon,
-.logo-link:hover .logo-wordmark-img {
+.logo-link:hover .logo-text {
     opacity: 0.8;
 }
 
-.logo-wordmark-img {
-    display: block;
-    height: auto;
-    max-height: 68px;
-    width: auto;
-    object-fit: contain;
-    transition: max-height 0.3s ease, opacity 0.2s ease;
+.logo-text {
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #fff;
+    transition: font-size 0.3s ease, opacity 0.2s ease;
 }
 
 /* Scrolled state - smaller logo */
@@ -101,8 +102,8 @@ body {
     max-height: 48px;
 }
 
-.navbar.scrolled .logo-wordmark-img {
-    max-height: 42px;
+.navbar.scrolled .logo-text {
+    font-size: 28px;
 }
 
 .navbar.scrolled .logo-link {
@@ -504,12 +505,12 @@ body {
         max-height: 38px;
     }
 
-    .navbar.scrolled .logo-wordmark-img {
-        max-height: 32px;
+    .navbar.scrolled .logo-text {
+        font-size: 20px;
     }
 
-    .logo-wordmark-img {
-        max-height: 44px;
+    .logo-text {
+        font-size: 28px;
     }
 
     .nav-menu {
@@ -629,8 +630,8 @@ body {
         padding: 20px 16px;
     }
 
-    .logo-wordmark-img {
-        max-height: 36px;
+    .logo-text {
+        font-size: 22px;
     }
 
     .section-heading {
