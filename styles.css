@@ -32,13 +32,19 @@ html {
 
 body {
     font-family: 'GT Ultra', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    line-height: 1.6;
+    line-height: 1.5;
     color: #fff;
     background-color: #000;
     font-weight: 500;
     letter-spacing: 0.01em;
+    text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, a, li, span, small, button, input, textarea {
+    font-family: inherit;
 }
 
 /* Navigation */
@@ -119,11 +125,11 @@ body {
 .nav-link {
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 16px;
     transition: opacity 0.2s ease;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
 }
 
 .nav-link:hover {
@@ -205,10 +211,10 @@ body {
 
 .hero-title {
     font-size: 48px;
-    font-weight: 400;
+    font-weight: 700;
     color: #fff;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.06em;
 }
 
 .scroll-indicator {
@@ -271,12 +277,13 @@ body {
 
 .intro-line-1,
 .intro-line-2 {
-    font-size: 20px;
-    line-height: 1.8;
+    font-size: 22px;
+    line-height: 1.65;
     color: #fff;
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
     margin: 0;
+    letter-spacing: 0.005em;
 }
 
 .intro-line-1 {
@@ -292,12 +299,12 @@ body {
 
 /* Section Headings */
 .section-heading {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 700;
     color: #fff;
     margin-bottom: 60px;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
 }
 
 /* Work Section */
@@ -387,22 +394,23 @@ body {
 }
 
 .project-title {
-    font-size: 28px;
-    font-weight: 500;
+    font-size: 32px;
+    font-weight: 700;
     color: #fff;
     margin-bottom: 12px;
-    letter-spacing: -0.01em;
-    line-height: 1.3;
+    letter-spacing: 0.005em;
+    line-height: 1.2;
 }
 
 .project-meta {
-    font-size: 14px;
+    font-size: 15px;
     color: #fff;
-    line-height: 1.8;
+    line-height: 1.6;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     align-items: center;
+    letter-spacing: 0.015em;
 }
 
 .meta-label {
@@ -435,10 +443,11 @@ body {
 }
 
 .about-text {
-    font-size: 16px;
-    line-height: 1.8;
+    font-size: 17px;
+    line-height: 1.75;
     color: #fff;
     font-weight: 400;
+    letter-spacing: 0.005em;
 }
 
 .about-text strong {
@@ -465,11 +474,12 @@ body {
 }
 
 .email {
-    font-size: 16px;
+    font-size: 18px;
     color: #fff;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 500;
     transition: opacity 0.2s ease;
+    letter-spacing: 0.02em;
 }
 
 .email:hover {
@@ -551,7 +561,7 @@ body {
     }
 
     .section-heading {
-        font-size: 18px;
+        font-size: 22px;
         margin-bottom: 40px;
     }
 
@@ -569,13 +579,13 @@ body {
     }
 
     .project-title {
-        font-size: 20px;
+        font-size: 24px;
         line-height: 1.3;
         word-wrap: break-word;
     }
 
     .project-meta {
-        font-size: 12px;
+        font-size: 13px;
         line-height: 1.6;
         word-wrap: break-word;
     }
@@ -592,7 +602,7 @@ body {
     }
 
     .about-text {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .about-image-wrapper {
@@ -635,7 +645,7 @@ body {
     }
 
     .section-heading {
-        font-size: 16px;
+        font-size: 20px;
         margin-bottom: 32px;
     }
 
@@ -653,13 +663,13 @@ body {
     }
 
     .project-title {
-        font-size: 18px;
+        font-size: 22px;
         line-height: 1.3;
         word-wrap: break-word;
     }
 
     .project-meta {
-        font-size: 11px;
+        font-size: 12px;
         flex-direction: column;
         align-items: flex-start;
         gap: 4px;
@@ -672,12 +682,12 @@ body {
     }
 
     .about-text {
-        font-size: 14px;
+        font-size: 15px;
         line-height: 1.7;
     }
 
     .section-heading {
-        font-size: 18px;
+        font-size: 20px;
         margin-bottom: 32px;
     }
 }
