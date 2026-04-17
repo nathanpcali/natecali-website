@@ -25,8 +25,80 @@ html {
     --body-copy-size-mobile: 14px;
 }
 
+@font-face {
+    font-family: "Bauhaus Kijs Display";
+    src: url("fonts/BauhausKijsDisplay-Thin.otf") format("opentype");
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Bauhaus Kijs Display";
+    src: url("fonts/BauhausKijsDisplay-ExtraLight.otf") format("opentype");
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Bauhaus Kijs Display";
+    src: url("fonts/BauhausKijsDisplay-Light.otf") format("opentype");
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Bauhaus Kijs Display";
+    src: url("fonts/BauhausKijsDisplay-Regular.otf") format("opentype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Bauhaus Kijs Display";
+    src: url("fonts/BauhausKijsDisplay-Medium.otf") format("opentype");
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Bauhaus Kijs Display";
+    src: url("fonts/BauhausKijsDisplay-SemiBold.otf") format("opentype");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Bauhaus Kijs Display";
+    src: url("fonts/BauhausKijsDisplay-Bold.otf") format("opentype");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Bauhaus Kijs Display";
+    src: url("fonts/BauhausKijsDisplay-ExtraBold.otf") format("opentype");
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Bauhaus Kijs Display";
+    src: url("fonts/BauhausKijsDisplay-Black.otf") format("opentype");
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+}
+
 body {
-    font-family: "nickel", "maku", sans-serif;
+    font-family: "Bauhaus Kijs Display", "Helvetica Neue", Arial, sans-serif;
     line-height: 1.5;
     color: #fff;
     background-color: #000;

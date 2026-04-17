@@ -1,5 +1,4 @@
 # Licensed Grilli Type webfonts — keep local copies out of public repos
 fonts/*.woff2
 fonts/*.woff
-fonts/*.otf
 fonts/*.ttf

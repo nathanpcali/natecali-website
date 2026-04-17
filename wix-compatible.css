@@ -5,7 +5,7 @@
 
 /* Base Styles - These will override Wix defaults */
 #SITE_CONTAINER {
-    font-family: 'GT Ultra', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Bauhaus Kijs Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Hero Section Styling */
@@ -43,7 +43,7 @@
 [data-testid="inputContainer"] textarea {
     border-radius: 4px;
     padding: 0.75rem;
-    font-family: 'GT Ultra', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Bauhaus Kijs Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Navigation Menu Styling */
