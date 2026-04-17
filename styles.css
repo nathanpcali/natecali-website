@@ -145,9 +145,9 @@ p, a, li, span, small, button, input, textarea {
 }
 
 .logo-icon {
-    width: 72px;
+    width: 108px;
     height: auto;
-    max-height: 72px;
+    max-height: 108px;
     display: block;
     margin-right: -4px;
     transition: width 0.3s ease, max-height 0.3s ease, opacity 0.2s ease;
@@ -171,8 +171,8 @@ p, a, li, span, small, button, input, textarea {
 
 /* Scrolled state - smaller logo */
 .navbar.scrolled .logo-icon {
-    width: 48px;
-    max-height: 48px;
+    width: 72px;
+    max-height: 72px;
 }
 
 .navbar.scrolled .logo-text {
@@ -572,14 +572,14 @@ p, a, li, span, small, button, input, textarea {
     }
 
     .logo-icon {
-        width: 48px;
+        width: 72px;
         height: auto;
-        max-height: 48px;
+        max-height: 72px;
     }
 
     .navbar.scrolled .logo-icon {
-        width: 38px;
-        max-height: 38px;
+        width: 57px;
+        max-height: 57px;
     }
 
     .navbar.scrolled .logo-text {
