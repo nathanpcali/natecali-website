@@ -35,7 +35,8 @@ body {
     line-height: 1.6;
     color: #fff;
     background-color: #000;
-    font-weight: 400;
+    font-weight: 500;
+    letter-spacing: 0.01em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -88,7 +89,7 @@ body {
 .logo-wordmark-img {
     display: block;
     height: auto;
-    max-height: 52px;
+    max-height: 68px;
     width: auto;
     object-fit: contain;
     transition: max-height 0.3s ease, opacity 0.2s ease;
@@ -101,7 +102,7 @@ body {
 }
 
 .navbar.scrolled .logo-wordmark-img {
-    max-height: 40px;
+    max-height: 42px;
 }
 
 .navbar.scrolled .logo-link {
@@ -117,11 +118,11 @@ body {
 .nav-link {
     color: #fff;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     transition: opacity 0.2s ease;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.08em;
 }
 
 .nav-link:hover {
@@ -272,8 +273,8 @@ body {
     font-size: 20px;
     line-height: 1.8;
     color: #fff;
-    font-weight: 400;
-    font-style: italic;
+    font-weight: 500;
+    font-style: normal;
     margin: 0;
 }
 
@@ -290,12 +291,12 @@ body {
 
 /* Section Headings */
 .section-heading {
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 28px;
+    font-weight: 700;
     color: #fff;
     margin-bottom: 60px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.08em;
 }
 
 /* Work Section */
@@ -386,10 +387,10 @@ body {
 
 .project-title {
     font-size: 28px;
-    font-weight: 400;
+    font-weight: 500;
     color: #fff;
     margin-bottom: 12px;
-    letter-spacing: -0.3px;
+    letter-spacing: -0.01em;
     line-height: 1.3;
 }
 
@@ -507,6 +508,10 @@ body {
         max-height: 32px;
     }
 
+    .logo-wordmark-img {
+        max-height: 44px;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -622,6 +627,10 @@ body {
 
     .nav-container {
         padding: 20px 16px;
+    }
+
+    .logo-wordmark-img {
+        max-height: 36px;
     }
 
     .section-heading {
